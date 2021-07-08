@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="DecideOnIntervention" name="Decide on Intervention" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <decision id="Decision_0y3ovp0" name="Decision on Intervention">
+    <informationRequirement id="InformationRequirement_1ffcp65">
+      <requiredInput href="#InputData_1doi9ui" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_1gvdopj">
+      <requiredInput href="#InputData_0t2898q" />
+    </informationRequirement>
+    <informationRequirement id="InformationRequirement_04ngq9d">
+      <requiredInput href="#InputData_12d5wl4" />
+    </informationRequirement>
+    <decisionTable id="DecisionTable_117ogoy" hitPolicy="FIRST">
+      <input id="Input_1" label="Client expectation" biodi:width="235">
+        <inputExpression id="InputExpression_1" typeRef="string">
+          <text>clientExpectation</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_0n2jpiw" label="Original materials/substracts" biodi:width="268">
+        <inputExpression id="LiteralExpression_0wjvybt" typeRef="boolean">
+          <text>originalMaterials</text>
+        </inputExpression>
+      </input>
+      <input id="InputClause_1l27o0l" label="Car document availability" biodi:width="222">
+        <inputExpression id="LiteralExpression_0pp3zci" typeRef="boolean">
+          <text>carDocuments</text>
+        </inputExpression>
+      </input>
+      <output id="Output_1" name="Intervention" typeRef="string" biodi:width="245" />
+      <rule id="DecisionRule_0f8m2uo">
+        <inputEntry id="UnaryTests_1s6aj0b">
+          <text>Preservation</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0vu8io0">
+          <text>true</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0v8xt1t">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0jsxuqb">
+          <text>Preservation</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0yx9735">
+        <inputEntry id="UnaryTests_0mqs5xy">
+          <text>Cosmetic Restoration</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0jvb8st">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_11gdawj">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1kzeu4u">
+          <text>Cosmetic Restoration</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0bh99o3">
+        <inputEntry id="UnaryTests_01vk4md">
+          <text>Traditional Restoration</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1lesdgj">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1sua8rq">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1vkew6n">
+          <text>Traditional Restoration</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1bqv6qn">
+        <inputEntry id="UnaryTests_01e73n1">
+          <text>Concour d'Elegance Restoration</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1gdsn8m">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1wnjxoh">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0dkd54d">
+          <text>Concour d'Elegance Restoration</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1wltfu9">
+        <inputEntry id="UnaryTests_0y7e7pg">
+          <text>Traditional Mixed</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1a07w8n">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0gqackr">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_1cambhj">
+          <text>Traditional Mixed</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_1i7r8kf">
+        <inputEntry id="UnaryTests_16kfcax">
+          <text>Concour d'Elegance Mixed</text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_10z2v7v">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_0nfpeld">
+          <text>true</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0868e2a">
+          <text>Concour d'Elegance Mixed</text>
+        </outputEntry>
+      </rule>
+      <rule id="DecisionRule_0749i87">
+        <inputEntry id="UnaryTests_1j9idvs">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_14a9b9c">
+          <text></text>
+        </inputEntry>
+        <inputEntry id="UnaryTests_1bnnskd">
+          <text>false</text>
+        </inputEntry>
+        <outputEntry id="LiteralExpression_0a270r9">
+          <text>None</text>
+        </outputEntry>
+      </rule>
+    </decisionTable>
+  </decision>
+  <inputData id="InputData_1doi9ui" name="Client expectation" />
+  <inputData id="InputData_0t2898q" name="Car documentation availability" />
+  <inputData id="InputData_12d5wl4" name="Original materials/substracts" />
+  <textAnnotation id="TextAnnotation_1akrhjl">
+    <text>It's checked whether the vehicle has original paint (very rare); if it has the full paint layer; the homogeneity of the paint color; and whether the paint thickness is below 500 µm</text>
+  </textAnnotation>
+  <association id="Association_10ip1v6">
+    <sourceRef href="#TextAnnotation_1akrhjl" />
+    <targetRef href="#InputData_12d5wl4" />
+  </association>
+  <textAnnotation id="TextAnnotation_0ywj98p">
+    <text>Client expectations are subdivided in Preservation, Restoration, and Mixed (Conservation and Restoration); Regarding the depth of Restorations and Conservations, they classify as Cosmetic, Traditional, and "Concour d'Elegance"</text>
+  </textAnnotation>
+  <association id="Association_0t6px16">
+    <sourceRef href="#TextAnnotation_0ywj98p" />
+    <targetRef href="#InputData_1doi9ui" />
+  </association>
+  <dmndi:DMNDI>
+    <dmndi:DMNDiagram>
+      <dmndi:DMNShape dmnElementRef="Decision_0y3ovp0">
+        <dc:Bounds height="80" width="180" x="710" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNShape id="DMNShape_1isr2hb" dmnElementRef="InputData_1doi9ui">
+        <dc:Bounds height="45" width="125" x="497" y="97" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_118tqun" dmnElementRef="InformationRequirement_1ffcp65">
+        <di:waypoint x="622" y="120" />
+        <di:waypoint x="690" y="120" />
+        <di:waypoint x="710" y="120" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_04aqonc" dmnElementRef="InputData_0t2898q">
+        <dc:Bounds height="45" width="125" x="738" y="217" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0lgj84q" dmnElementRef="InformationRequirement_1gvdopj">
+        <di:waypoint x="801" y="217" />
+        <di:waypoint x="800" y="180" />
+        <di:waypoint x="800" y="160" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_0kw0eda" dmnElementRef="InputData_12d5wl4">
+        <dc:Bounds height="45" width="125" x="987" y="97" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_1c99crt" dmnElementRef="InformationRequirement_04ngq9d">
+        <di:waypoint x="987" y="120" />
+        <di:waypoint x="910" y="120" />
+        <di:waypoint x="890" y="120" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_091qy0r" dmnElementRef="TextAnnotation_1akrhjl">
+        <dc:Bounds height="69" width="294" x="1163" y="85" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_0xrsvz5" dmnElementRef="Association_10ip1v6">
+        <di:waypoint x="1163" y="123" />
+        <di:waypoint x="1112" y="122" />
+      </dmndi:DMNEdge>
+      <dmndi:DMNShape id="DMNShape_1udddbp" dmnElementRef="TextAnnotation_0ywj98p">
+        <dc:Bounds height="80" width="288" x="156" y="80" />
+      </dmndi:DMNShape>
+      <dmndi:DMNEdge id="DMNEdge_00cs0po" dmnElementRef="Association_0t6px16">
+        <di:waypoint x="444" y="120" />
+        <di:waypoint x="497" y="120" />
+      </dmndi:DMNEdge>
+    </dmndi:DMNDiagram>
+  </dmndi:DMNDI>
+</definitions>
