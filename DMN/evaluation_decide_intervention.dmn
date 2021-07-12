@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="DecideOnIntervention" name="Decide on Intervention" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
-  <decision id="Decision_0y3ovp0" name="Decision on Intervention">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="DecideOnInterventionDiagram" name="Decide on Intervention" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+  <decision id="DecideOnIntervention" name="Decision on Intervention">
     <informationRequirement id="InformationRequirement_1ffcp65">
-      <requiredInput href="#InputData_1doi9ui" />
+      <requiredInput href="#clientExpectation" />
     </informationRequirement>
     <informationRequirement id="InformationRequirement_1gvdopj">
-      <requiredInput href="#InputData_0t2898q" />
+      <requiredInput href="#carDocuments" />
     </informationRequirement>
     <informationRequirement id="InformationRequirement_04ngq9d">
-      <requiredInput href="#InputData_12d5wl4" />
+      <requiredInput href="#originalMaterials" />
     </informationRequirement>
     <decisionTable id="DecisionTable_117ogoy" hitPolicy="FIRST">
       <input id="Input_1" label="Client expectation" biodi:width="235">
@@ -127,29 +127,29 @@
       </rule>
     </decisionTable>
   </decision>
-  <inputData id="InputData_1doi9ui" name="Client expectation" />
-  <inputData id="InputData_0t2898q" name="Car documentation availability" />
-  <inputData id="InputData_12d5wl4" name="Original materials/substracts" />
+  <inputData id="clientExpectation" name="Client expectation" />
+  <inputData id="carDocuments" name="Car documentation availability" />
+  <inputData id="originalMaterials" name="Original materials/substracts" />
   <textAnnotation id="TextAnnotation_1akrhjl">
     <text>It's checked whether the vehicle has original paint (very rare); if it has the full paint layer; the homogeneity of the paint color; and whether the paint thickness is below 500 µm</text>
   </textAnnotation>
   <association id="Association_10ip1v6">
     <sourceRef href="#TextAnnotation_1akrhjl" />
-    <targetRef href="#InputData_12d5wl4" />
+    <targetRef href="#originalMaterials" />
   </association>
   <textAnnotation id="TextAnnotation_0ywj98p">
     <text>Client expectations are subdivided in Preservation, Restoration, and Mixed (Conservation and Restoration); Regarding the depth of Restorations and Conservations, they classify as Cosmetic, Traditional, and "Concour d'Elegance"</text>
   </textAnnotation>
   <association id="Association_0t6px16">
     <sourceRef href="#TextAnnotation_0ywj98p" />
-    <targetRef href="#InputData_1doi9ui" />
+    <targetRef href="#clientExpectation" />
   </association>
   <dmndi:DMNDI>
     <dmndi:DMNDiagram>
-      <dmndi:DMNShape dmnElementRef="Decision_0y3ovp0">
+      <dmndi:DMNShape dmnElementRef="DecideOnIntervention">
         <dc:Bounds height="80" width="180" x="710" y="80" />
       </dmndi:DMNShape>
-      <dmndi:DMNShape id="DMNShape_1isr2hb" dmnElementRef="InputData_1doi9ui">
+      <dmndi:DMNShape id="DMNShape_1isr2hb" dmnElementRef="clientExpectation">
         <dc:Bounds height="45" width="125" x="497" y="97" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_118tqun" dmnElementRef="InformationRequirement_1ffcp65">
@@ -157,7 +157,7 @@
         <di:waypoint x="690" y="120" />
         <di:waypoint x="710" y="120" />
       </dmndi:DMNEdge>
-      <dmndi:DMNShape id="DMNShape_04aqonc" dmnElementRef="InputData_0t2898q">
+      <dmndi:DMNShape id="DMNShape_04aqonc" dmnElementRef="carDocuments">
         <dc:Bounds height="45" width="125" x="738" y="217" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_0lgj84q" dmnElementRef="InformationRequirement_1gvdopj">
@@ -165,7 +165,7 @@
         <di:waypoint x="800" y="180" />
         <di:waypoint x="800" y="160" />
       </dmndi:DMNEdge>
-      <dmndi:DMNShape id="DMNShape_0kw0eda" dmnElementRef="InputData_12d5wl4">
+      <dmndi:DMNShape id="DMNShape_0kw0eda" dmnElementRef="originalMaterials">
         <dc:Bounds height="45" width="125" x="987" y="97" />
       </dmndi:DMNShape>
       <dmndi:DMNEdge id="DMNEdge_1c99crt" dmnElementRef="InformationRequirement_04ngq9d">
