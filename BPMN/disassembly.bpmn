@@ -338,12 +338,6 @@
         <omgdi:waypoint x="1540" y="300" />
         <omgdi:waypoint x="1645" y="300" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNShape id="Gateway_0yxbapc_gui" bpmnElement="Gateway_0yxbapc">
-        <omgdc:Bounds x="1130" y="280" width="40" height="40" />
-        <bpmndi:BPMNLabel labelStyle="sid-906f74a5-e83b-456f-a409-d8c49d43b8bd">
-          <omgdc:Bounds x="1200" y="292" width="62" height="27" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_1iseec0_gui" bpmnElement="Gateway_1iseec0" isMarkerVisible="true">
         <omgdc:Bounds x="1000" y="280" width="40" height="40" />
       </bpmndi:BPMNShape>
@@ -409,6 +403,12 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_195xfna_di" bpmnElement="Activity_010hu4o">
         <omgdc:Bounds x="650" y="370" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Gateway_0yxbapc_gui" bpmnElement="Gateway_0yxbapc">
+        <omgdc:Bounds x="1130" y="280" width="40" height="40" />
+        <bpmndi:BPMNLabel labelStyle="sid-906f74a5-e83b-456f-a409-d8c49d43b8bd">
+          <omgdc:Bounds x="1189" y="286" width="62" height="27" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNEdge id="DataInputAssociation_1fi9yis_gui" bpmnElement="DataInputAssociation_1fi9yis">
         <omgdi:waypoint x="880" y="509.4135" />
