@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="DecideOnInterventionDiagram" name="Decide on Intervention" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.8.1">
+<definitions xmlns="https://www.omg.org/spec/DMN/20191111/MODEL/" xmlns:dmndi="https://www.omg.org/spec/DMN/20191111/DMNDI/" xmlns:dc="http://www.omg.org/spec/DMN/20180521/DC/" xmlns:biodi="http://bpmn.io/schema/dmn/biodi/2.0" xmlns:di="http://www.omg.org/spec/DMN/20180521/DI/" id="DecideOnInterventionDiagram" name="Decide on Intervention" namespace="http://camunda.org/schema/1.0/dmn" exporter="Camunda Modeler" exporterVersion="4.9.0">
   <decision id="DecideOnIntervention" name="Decision on Intervention">
     <informationRequirement id="InformationRequirement_1ffcp65">
       <requiredInput href="#clientExpectation" />
@@ -29,7 +29,7 @@
       <output id="Output_1" name="Intervention" typeRef="string" biodi:width="245" />
       <rule id="DecisionRule_0f8m2uo">
         <inputEntry id="UnaryTests_1s6aj0b">
-          <text>Preservation</text>
+          <text>"Preservation"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0vu8io0">
           <text>true</text>
@@ -38,12 +38,12 @@
           <text>true</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0jsxuqb">
-          <text>Preservation</text>
+          <text>"Preservation"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0yx9735">
         <inputEntry id="UnaryTests_0mqs5xy">
-          <text>Cosmetic Restoration</text>
+          <text>"Cosmetic Restoration"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_0jvb8st">
           <text></text>
@@ -52,12 +52,12 @@
           <text>true</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1kzeu4u">
-          <text>Cosmetic Restoration</text>
+          <text>"Cosmetic Restoration"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0bh99o3">
         <inputEntry id="UnaryTests_01vk4md">
-          <text>Traditional Restoration</text>
+          <text>"Traditional Restoration"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1lesdgj">
           <text></text>
@@ -66,12 +66,12 @@
           <text>true</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1vkew6n">
-          <text>Traditional Restoration</text>
+          <text>"Traditional Restoration"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1bqv6qn">
         <inputEntry id="UnaryTests_01e73n1">
-          <text>Concour d'Elegance Restoration</text>
+          <text>"Concour d'Elegance Restoration"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1gdsn8m">
           <text></text>
@@ -80,12 +80,12 @@
           <text>true</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0dkd54d">
-          <text>Concour d'Elegance Restoration</text>
+          <text>"Concour d'Elegance Restoration"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1wltfu9">
         <inputEntry id="UnaryTests_0y7e7pg">
-          <text>Traditional Mixed</text>
+          <text>"Traditional Mixed"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_1a07w8n">
           <text></text>
@@ -94,12 +94,12 @@
           <text>true</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_1cambhj">
-          <text>Traditional Mixed</text>
+          <text>"Traditional Mixed"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_1i7r8kf">
         <inputEntry id="UnaryTests_16kfcax">
-          <text>Concour d'Elegance Mixed</text>
+          <text>"Concour d'Elegance Mixed"</text>
         </inputEntry>
         <inputEntry id="UnaryTests_10z2v7v">
           <text></text>
@@ -108,7 +108,7 @@
           <text>true</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0868e2a">
-          <text>Concour d'Elegance Mixed</text>
+          <text>"Concour d'Elegance Mixed"</text>
         </outputEntry>
       </rule>
       <rule id="DecisionRule_0749i87">
@@ -122,7 +122,7 @@
           <text>false</text>
         </inputEntry>
         <outputEntry id="LiteralExpression_0a270r9">
-          <text>None</text>
+          <text>"None"</text>
         </outputEntry>
       </rule>
     </decisionTable>
