@@ -9,14 +9,14 @@
       <signavio:signavioDiagramMetaData metaKey="soxrelevant" metaValue="" />
       <signavio:signavioDiagramMetaData metaKey="revisionid" metaValue="ba51e39965c942688d6d138689524342" />
     </extensionElements>
-    <participant id="Participant_0nkcr34" name="Classic Car Restoration" processRef="Process_0v925f6">
+    <participant id="Participant_0nkcr34" name="Classic Car Restoration" processRef="restoration_base">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff" />
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
       </extensionElements>
     </participant>
   </collaboration>
-  <process id="Process_0v925f6" name="Classic Car Restoration" processType="None" isClosed="false" isExecutable="false">
+  <process id="restoration_base" name="Restoration Base" processType="None" isClosed="false" isExecutable="true">
     <extensionElements />
     <laneSet id="sid-485d280b-523c-4a8c-89ef-b10d9ae2d09b">
       <lane id="sid-5afbca98-def4-4a9a-8c8b-6a618a9d6e80">
@@ -25,12 +25,12 @@
           <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
         </extensionElements>
         <flowNodeRef>Event_15s806p</flowNodeRef>
-        <flowNodeRef>Activity_096zd4f</flowNodeRef>
         <flowNodeRef>Event_0uuc6of</flowNodeRef>
         <flowNodeRef>Activity_14l8cfg</flowNodeRef>
         <flowNodeRef>Activity_0112wdd</flowNodeRef>
         <flowNodeRef>sid-C17D1584-E3A7-4163-BF4A-F852F24B67D4</flowNodeRef>
         <flowNodeRef>Activity_1pngj6u</flowNodeRef>
+        <flowNodeRef>Activity_096zd4f</flowNodeRef>
       </lane>
     </laneSet>
     <startEvent id="Event_15s806p" name="Begin restoration process">
@@ -40,16 +40,6 @@
       </extensionElements>
       <outgoing>Flow_1ymddpa</outgoing>
     </startEvent>
-    <task id="Activity_096zd4f" name="Reassembly">
-      <extensionElements>
-        <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
-        <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
-        <signavio:signavioMetaData metaKey="risklevel" metaValue="" />
-        <signavio:signavioMetaData metaKey="externaldocuments" metaValue="[]" />
-      </extensionElements>
-      <incoming>Flow_15hmsnf</incoming>
-      <outgoing>Flow_197sicn</outgoing>
-    </task>
     <endEvent id="Event_0uuc6of" name="End successful restoration">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffff" />
@@ -58,7 +48,7 @@
       </extensionElements>
       <incoming>Flow_197sicn</incoming>
     </endEvent>
-    <callActivity id="Activity_14l8cfg" name="Evaluation" calledElement="planning_diagram">
+    <callActivity id="Activity_14l8cfg" name="Evaluation" calledElement="restoration_evaluation">
       <extensionElements>
         <signavio:signavioStencil id="CollapsedSubprocess" />
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
@@ -70,7 +60,7 @@
       <incoming>Flow_1ymddpa</incoming>
       <outgoing>Flow_11roknl</outgoing>
     </callActivity>
-    <callActivity id="Activity_0112wdd" name="Disassembly" calledElement="disassembly_diagram">
+    <callActivity id="Activity_0112wdd" name="Disassembly" calledElement="restoration_disassembly">
       <extensionElements>
         <signavio:signavioStencil id="CollapsedSubprocess" />
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
@@ -136,6 +126,10 @@
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
       </extensionElements>
     </sequenceFlow>
+    <userTask id="Activity_096zd4f" name="Reassembly">
+      <incoming>Flow_15hmsnf</incoming>
+      <outgoing>Flow_197sicn</outgoing>
+    </userTask>
   </process>
   <bpmndi:BPMNDiagram id="sid-d8c03341-1b0c-46d4-86ee-74aec2bc5a6a">
     <bpmndi:BPMNPlane id="sid-12cf0bcf-aaed-417a-8ee3-8b32061d5bc6" bpmnElement="BaseFlowProcess">
@@ -178,12 +172,6 @@
           <omgdc:Bounds x="228" y="192" width="84" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_096zd4f_gui" bpmnElement="Activity_096zd4f">
-        <omgdc:Bounds x="980" y="130" width="100" height="80" />
-        <bpmndi:BPMNLabel labelStyle="sid-cd313dba-2d79-44f3-bfc1-33a822d0dc25">
-          <omgdc:Bounds x="997.9857139587402" y="162" width="64.02857208251953" height="12" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Event_0uuc6of_gui" bpmnElement="Event_0uuc6of">
         <omgdc:Bounds x="1145" y="155" width="30" height="30" />
         <bpmndi:BPMNLabel labelStyle="sid-fbb7b1cd-4b48-4e0d-a384-69fad42c7304">
@@ -213,6 +201,9 @@
         <bpmndi:BPMNLabel labelStyle="sid-cd313dba-2d79-44f3-bfc1-33a822d0dc25">
           <omgdc:Bounds x="824.520715713501" y="156" width="91.02856826782227" height="24" />
         </bpmndi:BPMNLabel>
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Activity_15coga0_di" bpmnElement="Activity_096zd4f">
+        <omgdc:Bounds x="980" y="130" width="100" height="80" />
       </bpmndi:BPMNShape>
     </bpmndi:BPMNPlane>
     <bpmndi:BPMNLabelStyle id="sid-fbb7b1cd-4b48-4e0d-a384-69fad42c7304">
