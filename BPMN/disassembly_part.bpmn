@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:signavio="http://www.signavio.com" id="Definitions_1k1vzuv" targetNamespace="http://bpmn.io/schema/bpmn" expressionLanguage="http://www.w3.org/TR/XPath" exporter="Camunda Modeler" exporterVersion="4.9.0" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
+<definitions xmlns="http://www.omg.org/spec/BPMN/20100524/MODEL" xmlns:bpmndi="http://www.omg.org/spec/BPMN/20100524/DI" xmlns:omgdc="http://www.omg.org/spec/DD/20100524/DC" xmlns:omgdi="http://www.omg.org/spec/DD/20100524/DI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:signavio="http://www.signavio.com" id="Definitions_1k1vzuv" targetNamespace="http://bpmn.io/schema/bpmn" expressionLanguage="http://www.w3.org/TR/XPath" exporter="Camunda Modeler" exporterVersion="4.10.0" xsi:schemaLocation="http://www.omg.org/spec/BPMN/20100524/MODEL http://www.omg.org/spec/BPMN/2.0/20100501/BPMN20.xsd">
   <dataStore id="sid-50f73688-5360-4657-adc2-16e526bab6b9" name="Vehicles restoration process database" capacity="0" isUnlimited="false" />
   <collaboration id="sid-e25d5fdc-0183-43f1-a637-63788ed43475">
     <extensionElements>
@@ -31,7 +31,6 @@
         <flowNodeRef>Activity_194d7ak</flowNodeRef>
         <flowNodeRef>Activity_1ggdj9t</flowNodeRef>
         <flowNodeRef>Activity_1wba7og</flowNodeRef>
-        <flowNodeRef>Activity_0ipvv9q</flowNodeRef>
         <flowNodeRef>Activity_1sl3w45</flowNodeRef>
         <flowNodeRef>Event_063t1mg</flowNodeRef>
         <flowNodeRef>Activity_1mnobtn</flowNodeRef>
@@ -55,7 +54,7 @@
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
       </extensionElements>
       <incoming>Flow_01x7ged</incoming>
-      <incoming>Flow_1j4t18a</incoming>
+      <incoming>Flow_0l90gs8</incoming>
       <outgoing>Flow_120nyoe</outgoing>
     </exclusiveGateway>
     <userTask id="Activity_16gzyvt" name="Note relevant dimensions" implementation="##unspecified">
@@ -110,12 +109,12 @@
       </extensionElements>
       <conditionExpression xsi:type="tFormalExpression">#{Activity_194d7ak== 'Flow_0ia7nuv'}</conditionExpression>
     </sequenceFlow>
-    <sequenceFlow id="Flow_0l90gs8" name="Assembly position determined" isImmediate="true" sourceRef="Gateway_1v3y2bm" targetRef="Activity_0ipvv9q">
+    <sequenceFlow id="Flow_0l90gs8" name="Assembly position determined" isImmediate="true" sourceRef="Gateway_1v3y2bm" targetRef="Gateway_178pn7c">
       <extensionElements>
         <signavio:signavioMetaData metaKey="bordercolor" metaValue="#000000" />
         <signavio:signavioLabel align="left" distance="17.666672" from="0" orientation="ll" ref="text_name" to="1" valign="bottom" x="568.0" y="270.0" />
       </extensionElements>
-      <conditionExpression xsi:type="tFormalExpression">#{Activity_0ipvv9q== 'Flow_0l90gs8'}</conditionExpression>
+      <conditionExpression xsi:type="tFormalExpression">#{Gateway_178pn7c== 'Flow_0l90gs8'}</conditionExpression>
     </sequenceFlow>
     <userTask id="Activity_194d7ak" name="Produce sketches">
       <incoming>Flow_0ia7nuv</incoming>
@@ -128,11 +127,6 @@
     <userTask id="Activity_1wba7og" name="Photograph/film the part after removal">
       <incoming>Flow_1nncxhe</incoming>
       <outgoing>Flow_0nggw4k</outgoing>
-    </userTask>
-    <sequenceFlow id="Flow_1j4t18a" sourceRef="Activity_0ipvv9q" targetRef="Gateway_178pn7c" />
-    <userTask id="Activity_0ipvv9q" name="Skip taking position notes">
-      <incoming>Flow_0l90gs8</incoming>
-      <outgoing>Flow_1j4t18a</outgoing>
     </userTask>
     <userTask id="Activity_1sl3w45" name="Label and properly store the part in  container">
       <incoming>Flow_0nggw4k</incoming>
@@ -207,11 +201,19 @@
           <omgdc:Bounds x="195" y="225.25714111328125" width="12" height="89.4857177734375" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
+      <bpmndi:BPMNEdge id="Flow_1yd5n7b_gui" bpmnElement="Flow_1yd5n7b">
+        <omgdi:waypoint x="1770" y="270" />
+        <omgdi:waypoint x="1817" y="270" />
+      </bpmndi:BPMNEdge>
+      <bpmndi:BPMNEdge id="Flow_0ynd5p2_gui" bpmnElement="Flow_0ynd5p2">
+        <omgdi:waypoint x="1610" y="270" />
+        <omgdi:waypoint x="1670" y="270" />
+      </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0l90gs8_gui" bpmnElement="Flow_0l90gs8">
         <omgdi:waypoint x="562" y="270" />
-        <omgdi:waypoint x="770" y="270" />
+        <omgdi:waypoint x="1080" y="270" />
         <bpmndi:BPMNLabel labelStyle="sid-3019587c-ecce-46a5-a577-3556a40d4d4d">
-          <omgdc:Bounds x="556" y="240" width="88" height="27" />
+          <omgdc:Bounds x="572" y="240" width="88" height="27" />
         </bpmndi:BPMNLabel>
       </bpmndi:BPMNEdge>
       <bpmndi:BPMNEdge id="Flow_0ia7nuv_gui" bpmnElement="Flow_0ia7nuv">
@@ -251,18 +253,6 @@
         <omgdi:waypoint x="770" y="160" />
         <omgdi:waypoint x="870" y="160" />
       </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1j4t18a_di" bpmnElement="Flow_1j4t18a">
-        <omgdi:waypoint x="870" y="270" />
-        <omgdi:waypoint x="1080" y="270" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_0ynd5p2_gui" bpmnElement="Flow_0ynd5p2">
-        <omgdi:waypoint x="1610" y="270" />
-        <omgdi:waypoint x="1670" y="270" />
-      </bpmndi:BPMNEdge>
-      <bpmndi:BPMNEdge id="Flow_1yd5n7b_gui" bpmnElement="Flow_1yd5n7b">
-        <omgdi:waypoint x="1770" y="270" />
-        <omgdi:waypoint x="1817" y="270" />
-      </bpmndi:BPMNEdge>
       <bpmndi:BPMNShape id="Gateway_1v3y2bm_gui" bpmnElement="Gateway_1v3y2bm" isMarkerVisible="true">
         <omgdc:Bounds x="522" y="250" width="40" height="40" />
         <bpmndi:BPMNLabel labelStyle="sid-3019587c-ecce-46a5-a577-3556a40d4d4d">
@@ -286,9 +276,6 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_0wmuhxl_di" bpmnElement="Activity_1wba7og">
         <omgdc:Bounds x="1348" y="230" width="100" height="80" />
-      </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Activity_05zkei0_di" bpmnElement="Activity_0ipvv9q">
-        <omgdc:Bounds x="770" y="230" width="100" height="80" />
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1jdsm98_di" bpmnElement="Activity_1sl3w45">
         <omgdc:Bounds x="1510" y="230" width="100" height="80" />
