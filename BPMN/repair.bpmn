@@ -142,7 +142,7 @@
         <incoming>Flow_0nbvogc</incoming>
       </endEvent>
       <sequenceFlow id="Flow_1y2vl9h" sourceRef="Activity_1f72sd2" targetRef="Activity_1pwnlo4" />
-      <sendTask id="Activity_1pwnlo4" name="Inform customer&#10;of the issue" camunda:expression="#{Activity_1pwnlo4== &#39;Flow_1y2vl9h&#39;}">
+      <sendTask id="Activity_1pwnlo4" name="Inform customer&#10;of the issue" camunda:expression="#{Flow_1y2vl9h== &#39;Activity_1pwnlo4&#39;}">
         <incoming>Flow_1y2vl9h</incoming>
         <outgoing>Flow_0qzemgf</outgoing>
       </sendTask>
@@ -178,7 +178,7 @@
       </extensionElements>
       <incoming>Flow_0v7dng9</incoming>
     </endEvent>
-    <callActivity id="Activity_0bo5xsi" name="Chassis Repair" calledElement="repair_chassis_diagram">
+    <callActivity id="Activity_0bo5xsi" name="Chassis Repair" calledElement="restoration_repair_chassis">
       <extensionElements>
         <signavio:signavioStencil id="CollapsedSubprocess" />
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#339966" />
@@ -188,7 +188,7 @@
       <incoming>Flow_1g4n66l</incoming>
       <outgoing>Flow_09zcf9f</outgoing>
     </callActivity>
-    <callActivity id="Activity_13851zo" name="Bodywork Repair" calledElement="repair_bodywork_diagram">
+    <callActivity id="Activity_13851zo" name="Bodywork Repair" calledElement="restoration_repair_bodywork">
       <extensionElements>
         <signavio:signavioStencil id="CollapsedSubprocess" />
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />
@@ -198,7 +198,7 @@
       <incoming>Flow_09zcf9f</incoming>
       <outgoing>Flow_07g8rw9</outgoing>
     </callActivity>
-    <callActivity id="Activity_06ykxko" name="Paint Repair" calledElement="">
+    <callActivity id="Activity_06ykxko" name="Paint Repair" calledElement="restoration_repair_paint">
       <extensionElements>
         <signavio:signavioStencil id="CollapsedSubprocess" />
         <signavio:signavioMetaData metaKey="bgcolor" metaValue="#ffffcc" />

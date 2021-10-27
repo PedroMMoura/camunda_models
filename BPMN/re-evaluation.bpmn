@@ -110,11 +110,11 @@
       <incoming>Flow_01drh0i</incoming>
       <outgoing>Flow_1o7a8v2</outgoing>
     </userTask>
-    <sendTask id="Activity_0jrp509" name="Report car condition" camunda:expression="#{Activity_0jrp509== &#39;Flow_09yzxfg&#39;}">
+    <sendTask id="Activity_0jrp509" name="Report car condition" camunda:expression="#{Flow_09yzxfg== &#39;Activity_0jrp509&#39;}">
       <incoming>Flow_09yzxfg</incoming>
       <outgoing>Flow_0gjdlxx</outgoing>
     </sendTask>
-    <sendTask id="Activity_00j1vfk" name="Send budget and timeframe to customer" camunda:expression="#{Activity_00j1vfk== &#39;Flow_1o7a8vz&#39;}">
+    <sendTask id="Activity_00j1vfk" name="Send budget and timeframe to customer" camunda:expression="#{Flow_1o7a8vz== &#39;Activity_00j1vfk&#39;}">
       <incoming>Flow_1o7a8v2</incoming>
       <outgoing>Flow_1xv6skf</outgoing>
     </sendTask>
@@ -316,12 +316,6 @@
       <bpmndi:BPMNShape id="Activity_1p2v3ho_di" bpmnElement="Activity_1dvyck2">
         <omgdc:Bounds x="1804" y="379" width="100" height="80" />
       </bpmndi:BPMNShape>
-      <bpmndi:BPMNShape id="Event_1oksnr3_di" bpmnElement="Event_1gqbtk1">
-        <omgdc:Bounds x="1526" y="292" width="36" height="36" />
-        <bpmndi:BPMNLabel>
-          <omgdc:Bounds x="1513" y="335" width="62" height="14" />
-        </bpmndi:BPMNLabel>
-      </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Gateway_0unsdvs_di" bpmnElement="Gateway_0unsdvs" isMarkerVisible="true">
         <omgdc:Bounds x="1979" y="394" width="50" height="50" />
         <bpmndi:BPMNLabel>
@@ -348,6 +342,12 @@
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Activity_1tti3mj_di" bpmnElement="Activity_0u1juxz">
         <omgdc:Bounds x="1040" y="379" width="100" height="80" />
+      </bpmndi:BPMNShape>
+      <bpmndi:BPMNShape id="Event_1oksnr3_di" bpmnElement="Event_1gqbtk1">
+        <omgdc:Bounds x="1526" y="292" width="36" height="36" />
+        <bpmndi:BPMNLabel>
+          <omgdc:Bounds x="1513" y="335" width="62" height="14" />
+        </bpmndi:BPMNLabel>
       </bpmndi:BPMNShape>
       <bpmndi:BPMNShape id="Participant_1vitade_gui" bpmnElement="Participant_1vitade" isHorizontal="true">
         <omgdc:Bounds x="160" y="80" width="2040" height="60" />
